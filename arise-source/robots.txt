@@ -1,4 +1,4 @@
 User-agent: * 
-Disallow: https://ari.se.net/config/*
+Disallow: https://josnih21.github.io/config/*
 
-Sitemap: https://ari.se.net/sitemap.xml
+Sitemap: https://josnih21.github.io/sitemap.xml
