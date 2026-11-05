@@ -1,6 +1,8 @@
 export const site = {
   name: "José Ángel Nieda",
   role: "Software Engineer",
+  photo: "/portrait.jpg",
+  photoAlt: "Portrait of José Ángel Nieda",
   tagline: "Software engineer based in Tenerife.",
   intro:
     "Tech lead at Wolters Kluwer España. I build mobile and backend software with a focus on clean architecture, automated tests, and code that is easy to change.",

@@ -43,7 +43,7 @@ src/
    └─ global.css         Colors, type, layout, responsive rules
 ```
 
-`public/` contains files copied as-is: the favicon, social preview image, `robots.txt`, and `sitemap.xml`.
+`public/` contains files copied as-is: the hero portrait, favicon, social preview image, `robots.txt`, and `sitemap.xml`.
 
 ## Add a project
 
@@ -106,6 +106,7 @@ Open `src/data/site.ts`:
 - `intro` is the paragraph in the hero.
 - `about` is the array of paragraphs in the About section.
 - `current` is the line with the green dot at the top.
+- `photo` and `photoAlt` control the hero portrait and its alt text.
 - `links` contains LinkedIn, GitHub, and the source link in the footer.
 
 There is intentionally no email address on the site. The contact section points to LinkedIn.
@@ -142,6 +143,12 @@ The content column is controlled by `--max` (currently `720px`). Fonts use the o
   </a>
 </li>
 ```
+
+## Replace the portrait
+
+The hero portrait is `public/portrait.jpg`. It is a square image, currently 480 × 480, and it is displayed at 200 × 200 on desktop and 128 × 128 on mobile. Replace it with another square image and keep the filename, or update `photo` in `src/data/site.ts` if you use a different filename.
+
+Also update `photoAlt` in `src/data/site.ts` if the new image needs different alt text.
 
 ## Replace the social preview image
 
