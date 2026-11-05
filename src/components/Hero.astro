@@ -1,0 +1,18 @@
+---
+import { site } from "../data/site";
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <p class="eyebrow">
+    <span class="status-dot" aria-hidden="true"></span>
+    {site.current}
+  </p>
+  <h1 id="hero-title">{site.name}</h1>
+  <p class="hero-tagline">{site.tagline}</p>
+  <p class="hero-intro">{site.intro}</p>
+  <p class="hero-meta">
+    <span>{site.location}</span>
+    <span class="meta-divider" aria-hidden="true">/</span>
+    <a href="#contact">Get in touch</a>
+  </p>
+</section>

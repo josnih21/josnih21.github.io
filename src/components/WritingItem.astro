@@ -1,0 +1,33 @@
+---
+import type { WritingItem } from "../data/writing";
+
+interface Props {
+  item: WritingItem;
+}
+
+const { item } = Astro.props;
+---
+
+<li class="writing-item">
+  <div class="writing-main">
+    <span class="writing-kind">{item.kind}</span>
+    <h3 class="writing-title" lang={item.lang}>
+      {
+        item.href ? (
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${item.title} (opens in a new tab)`}
+          >
+            {item.title}
+            <span class="external" aria-hidden="true">↗</span>
+          </a>
+        ) : (
+          item.title
+        )
+      }
+    </h3>
+  </div>
+  <p class="writing-meta">{item.venue} · {item.year}</p>
+</li>

@@ -1,0 +1,14 @@
+---
+import { site } from "../data/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <p>© {year} {site.name}</p>
+  <a class="back-to-top" href="#top">Back to top ↑</a>
+  <p>
+    Built with <a href="https://astro.build" target="_blank" rel="noreferrer">Astro</a>
+    · <a href={site.links.source} target="_blank" rel="noreferrer">Source</a>
+  </p>
+</footer>

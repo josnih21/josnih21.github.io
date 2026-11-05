@@ -1,0 +1,84 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import ExperienceEntry from "../components/ExperienceEntry.astro";
+import ProjectItem from "../components/ProjectItem.astro";
+import WritingItem from "../components/WritingItem.astro";
+import Footer from "../components/Footer.astro";
+
+import { site } from "../data/site";
+import { experience } from "../data/experience";
+import { education } from "../data/education";
+import { projects } from "../data/projects";
+import { writing } from "../data/writing";
+---
+
+<Base>
+  <Header />
+
+  <main id="main">
+    <Hero />
+
+    <Section id="about" index="01" title="About">
+      <div class="about-copy">
+        {site.about.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </Section>
+
+    <Section id="experience" index="02" title="Experience">
+      <div class="experience-list">
+        {experience.map((entry) => <ExperienceEntry entry={entry} />)}
+      </div>
+
+      <div class="education">
+        <h3 class="subsection-title">Education</h3>
+        <ul class="education-list">
+          {
+            education.map((item) => (
+              <li lang="es">
+                <span class="education-institution">{item.institution}</span>
+                <span class="education-program">{item.program}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </Section>
+
+    <Section id="projects" index="03" title="Selected projects">
+      <ol class="project-list">
+        {
+          projects.map((project, index) => (
+            <ProjectItem project={project} index={index} />
+          ))
+        }
+      </ol>
+    </Section>
+
+    <Section id="writing" index="04" title={"Writing & speaking"}>
+      <ul class="writing-list">
+        {writing.map((item) => <WritingItem item={item} />)}
+      </ul>
+    </Section>
+
+    <Section id="contact" index="05" title="Contact">
+      <p class="contact-lead">The best way to reach me is on LinkedIn.</p>
+      <ul class="contact-links">
+        <li>
+          <a href={site.links.linkedin} target="_blank" rel="me noreferrer">
+            LinkedIn <span aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href={site.links.github} target="_blank" rel="me noreferrer">
+            GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </Section>
+  </main>
+
+  <Footer />
+</Base>

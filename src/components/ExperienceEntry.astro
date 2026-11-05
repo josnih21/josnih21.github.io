@@ -1,0 +1,59 @@
+---
+import type { Experience } from "../data/experience";
+
+interface Props {
+  entry: Experience;
+}
+
+const { entry } = Astro.props;
+---
+
+<article class="experience-entry">
+  <div class="experience-meta">
+    <span class="experience-period">{entry.period}</span>
+    <span class="experience-location">{entry.location}</span>
+  </div>
+
+  <div class="experience-body">
+    <h3 class="experience-company">
+      {entry.company}
+      {entry.current && <span class="current-badge">Current</span>}
+    </h3>
+    <p class="experience-role">{entry.role}</p>
+
+    {
+      entry.summary && (
+        <p class="experience-summary">{entry.summary}</p>
+      )
+    }
+
+    {
+      entry.clients && (
+        <div class="client-work">
+          <p class="client-work-label">Client work</p>
+          <ul class="client-list">
+            {entry.clients.map((client) => (
+              <li class="client-item">
+                <div class="client-heading">
+                  <h4>{client.client}</h4>
+                  {client.context && (
+                    <span class="client-context">{client.context}</span>
+                  )}
+                </div>
+                <p class="client-description">{client.description}</p>
+                <ul
+                  class="tag-list"
+                  aria-label={`Technologies used for ${client.client}`}
+                >
+                  {client.tags.map((tag) => (
+                    <li>{tag}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+  </div>
+</article>

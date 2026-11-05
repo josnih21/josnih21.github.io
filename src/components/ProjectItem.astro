@@ -1,0 +1,38 @@
+---
+import type { Project } from "../data/projects";
+
+interface Props {
+  project: Project;
+  index: number;
+}
+
+const { project, index } = Astro.props;
+const number = String(index + 1).padStart(2, "0");
+---
+
+<li class="project">
+  <span class="project-index" aria-hidden="true">{number}</span>
+  <div class="project-body">
+    <h3 class="project-title">
+      {
+        project.href ? (
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${project.name} (opens in a new tab)`}
+          >
+            {project.name}
+            <span class="external" aria-hidden="true">↗</span>
+          </a>
+        ) : (
+          project.name
+        )
+      }
+    </h3>
+    <p class="project-description">{project.description}</p>
+    <ul class="tag-list" aria-label={`Technologies used in ${project.name}`}>
+      {project.tags.map((tag) => <li>{tag}</li>)}
+    </ul>
+  </div>
+</li>
