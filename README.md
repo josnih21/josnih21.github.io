@@ -146,7 +146,7 @@ The content column is controlled by `--max` (currently `720px`). Fonts use the o
 
 ## Replace the portrait
 
-The hero portrait is `public/portrait.jpg`. It is a square image, currently 480 × 480, and it is displayed at 200 × 200 on desktop and 128 × 128 on mobile. Replace it with another square image and keep the filename, or update `photo` in `src/data/site.ts` if you use a different filename.
+The hero portrait is `public/portrait.jpg`. It is a square image, currently 280 × 280, and it is displayed at 200 × 200 on desktop and 160 × 160 on mobile. Replace it with another square image and keep the filename, or update `photo` in `src/data/site.ts` if you use a different filename.
 
 Also update `photoAlt` in `src/data/site.ts` if the new image needs different alt text.
 
