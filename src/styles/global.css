@@ -116,17 +116,6 @@ a:hover {
   border-bottom: 1px solid var(--line);
 }
 
-.wordmark {
-  font-size: 15px;
-  font-weight: 650;
-  letter-spacing: -0.015em;
-  text-decoration: none;
-}
-
-.wordmark:hover {
-  color: var(--text);
-}
-
 .site-nav ul {
   display: flex;
   flex-wrap: wrap;
