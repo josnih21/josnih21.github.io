@@ -5,12 +5,12 @@ export const site = {
   photoAlt: "Portrait of José Ángel Nieda",
   tagline: "Software engineer based in Tenerife.",
   intro:
-    "Tech lead at Wolters Kluwer España. I build mobile and backend software with a focus on clean architecture, automated tests, and code that is easy to change. I’m also a contributor to FANNG-MPC, TII’s open-source secure multi-party computation framework.",
+    "Tech lead at Wolters Kluwer España. I build mobile and backend software with a focus on clean architecture, automated tests, and code that is easy to change. I’m especially interested in the intersection of machine learning, C++, and secure multi-party computation—the kind of problems FANNG-MPC explores.",
   location: "Tenerife, Canary Islands",
   current: "Tech lead at Wolters Kluwer España",
   title: "José Ángel Nieda — Software Engineer",
   description:
-    "Software engineer based in Tenerife. Tech lead at Wolters Kluwer España, building mobile and backend software with a focus on clean architecture. Contributor to FANNG-MPC, TII’s open-source secure multi-party computation framework.",
+    "Software engineer based in Tenerife. Tech lead at Wolters Kluwer España, building mobile and backend software with a focus on clean architecture. Interested in machine learning, C++, and secure multi-party computation.",
   url: "https://josnih21.github.io",
   links: {
     github: "https://github.com/josnih21",
