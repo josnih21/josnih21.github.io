@@ -43,7 +43,7 @@ export const experience: Experience[] = [
         context: "Vet assistance",
         description:
           "Built embedded web widgets for a US strategic partner, giving pet parents access to vet assistance via chat across partner websites.",
-        tags: ["Web widgets", "Chat", "Integrations"],
+        tags: ["Web widgets", "Chat", "Angular Dart", "Integrations"],
       },
       {
         client: "TII",
@@ -56,8 +56,8 @@ export const experience: Experience[] = [
         client: "TII",
         context: "Technology Innovation Institute",
         description:
-          "Contributor to FANNG-MPC, an open-source C++ framework for neural networks and general secure multi-party computation, built by TII’s Confidential Computing team.",
-        tags: ["C++", "MPC", "Machine Learning"],
+          "Contributor to FANNG-MPC, an open-source C++ framework for neural networks and general secure multi-party computation, built by TII’s Cryptography Research team.",
+        tags: ["C++", "MPC", "Machine Learning", "Python"],
       },
     ],
   },
