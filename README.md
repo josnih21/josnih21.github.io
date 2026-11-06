@@ -158,11 +158,14 @@ Also update `photoAlt` in `src/data/site.ts` if the new image needs different al
 
 The site is configured for `https://josnih21.github.io`.
 
-1. Rename the old `josnih21.github.io` repository to `arise-demo` in GitHub → Settings. This preserves the old Arise demo at `josnih21.github.io/arise-demo/`.
-2. Create a new **public** repository named `josnih21.github.io`.
-3. Push this project to the new repository's `main` branch.
-4. In the repository, go to **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**.
-5. The workflow in `.github/workflows/deploy.yml` builds and deploys on every push to `main`.
+The workflow in `.github/workflows/deploy.yml` builds on every push to `main` and publishes `dist/` to the `html` branch. GitHub Pages serves that branch.
+
+For a fresh repository:
+
+1. Create a **public** repository named `josnih21.github.io`.
+2. Push this project to the repository's `main` branch.
+3. In the repository, go to **Settings → Pages → Build and deployment** and set **Source** to **Deploy from a branch**, then choose the `html` branch and the `/ (root)` folder.
+4. Run the deploy workflow from the **Actions** tab (or push to `main`) to publish the first build.
 
 If you later use a custom domain, update the `site` value in `astro.config.mjs`, the URLs in `src/data/site.ts`, `public/robots.txt`, and `public/sitemap.xml`, then add the domain in GitHub Pages settings.
 
