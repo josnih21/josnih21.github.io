@@ -119,7 +119,7 @@ The colors are CSS variables at the top:
 
 ```css
 :root {
-  --bg: #faf9f6;
+  --bg: #ffffff;
   --text: #1c1b19;
   --muted: #6b6862;
   --line: #e6e2d9;
@@ -127,7 +127,7 @@ The colors are CSS variables at the top:
 }
 ```
 
-Dark mode uses the same variables under `@media (prefers-color-scheme: dark)`. Change those values and the whole site follows.
+The site uses a single light theme. Change those values and the whole site follows.
 
 The content column is controlled by `--max` (currently `720px`). Fonts use the operating system's default sans and monospace fonts.
 

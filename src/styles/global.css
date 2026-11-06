@@ -1,7 +1,7 @@
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
-  --bg: #faf9f6;
+  --bg: #ffffff;
   --text: #1c1b19;
   --muted: #6b6862;
   --line: #e6e2d9;
@@ -12,18 +12,6 @@
   --max: 720px;
   --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #101211;
-    --text: #e7e5df;
-    --muted: #a09c92;
-    --line: #2a2d2a;
-    --line-strong: #3b403b;
-    --accent: #8fc7b2;
-    --accent-soft: #1b2a24;
-  }
 }
 
 * {
